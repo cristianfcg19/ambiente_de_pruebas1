@@ -14,5 +14,5 @@ Se  utiliza Node.js
 <br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Products_List_With_Left_Search_Bar" width="200px" border="1"/>
 <br>
-El link del proyecto:    
+El link del proyecto ha testiar:    
 https://github.com/cristianfcg19/calidadDelSoftware
