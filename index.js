@@ -3,8 +3,19 @@ const {Builder,By,Key,util}=require("selenium-webdriver");
 async function ejemplo()
 {
 let driver=await new Builder().forBrowser("firefox").build();
-await driver.get("file:///C:/Users/Christian/Documents/GitHub/EcommerceTemplateBootstrap/index.html");
-await driver.findElement(By.name("hola").sendKeys("Selenium" ,Key.RETURN));
+await driver.get("https://github.com/");
+
+await driver.findElement(By.partialLinkText("Sign in")).click();
+
+
+if (await driver.getTitle()==="")
+{
+    console.log("correcto")
+}
+else
+{
+    console.log("ERROR");
+}
 }
 
 ejemplo();
