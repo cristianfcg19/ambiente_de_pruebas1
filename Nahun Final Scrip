@@ -1,23 +1,28 @@
-const { Builder, by, Key, util} = require ("selenium-webdriver");
+const { Builder, By, Key, util} = require ("selenium-webdriver");
 async function example(){
     let driver = await new Builder ().forBrowser("firefox").build();              
     await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
-  
+    
+        
+      
     //Escribir
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("Lechuga");
-    -
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("Lechuga");
+    await driver.getCurrentUrl();
+    
     //Editar
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("CARNE");
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("CARNE");
+    await driver.getCurrentUrl();
     -
+    
     //Borrar
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
-    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("");
-            
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("");
+    await driver.getCurrentUrl();
   
   if(await driver.findElement(By.xpath("/html/body/center/h1")).getText()=="405 Not Allowed")
   {
