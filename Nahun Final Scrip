@@ -1,0 +1,42 @@
+const { Builder, by, Key, util} = require ("selenium-webdriver");
+async function example(){
+    let driver = await new Builder ().forBrowser("firefox").build();              
+    await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
+  
+    //Escribir
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("Lechuga");
+    -
+    //Editar
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("CARNE");
+    -
+    //Borrar
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
+    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
+    driver.findElement(By.name("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("");
+            
+  
+  if(await driver.findElement(By.xpath("/html/body/center/h1")).getText()=="405 Not Allowed")
+  {
+      console.log("Se ha cometido un error "+ await driver.findElement(By.xpath("/html/body/center/h1")).getText());
+  }
+  else
+  {
+      console.log("Todo Salio Correctamente");
+  }
+}
+
+example();
+
+//node index
+
+/*
+Comandos que se usaron
+node index
+npm init 
+npm init -y
+npm install selenium-webdriver
+*/ 
