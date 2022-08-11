@@ -9,7 +9,6 @@ async function example(){
     await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
     await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
     await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("Lechuga");
-    await driver.getCurrentUrl();
     
     //Editar
     await driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
