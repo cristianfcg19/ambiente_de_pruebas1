@@ -4,19 +4,19 @@ async function example(){
     await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
   
     //Escribir
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("Lechuga");
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("Lechuga");
     -
     //Editar
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("CARNE");
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("CARNE");
     -
     //Borrar
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).click();
-    driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).clear();
-    driver.findElement(By.name("/html/body/div/div[1]/div[2]/div/div[2]/form/input")).sendKeys("");
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).click();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).clear();
+    driver.findElement(By.css(".header-search > form:nth-child(1) > input:nth-child(1)")).sendKeys("");
             
   
   if(await driver.findElement(By.xpath("/html/body/center/h1")).getText()=="405 Not Allowed")
