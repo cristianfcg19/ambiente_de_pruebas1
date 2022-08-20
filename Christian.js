@@ -4,25 +4,16 @@ const {Builder,By,Key,util}=require("selenium-webdriver");
 {
 let driver=await new Builder().forBrowser("firefox").build();
 ///Esta es URL QUE VA ABRIR
-await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
-///LO SIGUIENTE  ES PARA ABRIR LA LISTA Y OPRIMIR LINK VIEW PERSONAL 
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.css(".wsmenu-submenu > li:nth-child(1) > a:nth-child(1) > i:nth-child(1)")).click();
-//el getcurrente Es para actualizar la URl ala pagina que esta en ese momento
-await driver.getCurrentUrl();
-//HACE CLICK EN EL INFORMACION PERSONAL
-await driver.findElement(By.xpath(`/html/body/div/div[2]/div/div/div/div[1]/ul/li[2]/a`)).click();
-//Actualiza otra vez la url
-await driver.getCurrentUrl();
-///Lo siguiente limpia el los campos
-await driver.findElement(By.xpath(`//*[@id="firstname"]`)).clear();
+await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/account_information.html");
+
+
+
 await driver.findElement(By.xpath(`//*[@id="lastname"]`)).clear();
 await driver.findElement(By.xpath(`//*[@id="email"]`)).clear();
-await driver.findElement(By.xpath(`//*[@id="username"]`)).clear();
-await driver.findElement(By.className("form-control")).clear();
-///lo siguiente agrega texto alos campos
+await driver.findElement(By.xpath(`//*[@id="lastname"]`)).clear();
+await driver.findElement(By.xpath(`//*[@id="email"]`)).clear();
+await driver.findElement(By.xpath(`//*[@id="birthdate"]`)).click();
+
 await driver.findElement(By.xpath(`//*[@id="firstname"]`)).sendKeys("Christian");
 await driver.findElement(By.xpath(`//*[@id="lastname"]`)).sendKeys("Fabian");
 await driver.findElement(By.xpath(`//*[@id="email"]`)).sendKeys("cristian12c@gmail.com");
@@ -49,18 +40,9 @@ async function CP_U2_modificar()
 {
 let driver=await new Builder().forBrowser("firefox").build();
 ///Esta es URL QUE VA ABRIR
-await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
+await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/account_information.html");
 ///LO SIGUIENTE  ES PARA ABRIR LA LISTA Y OPRIMIR LINK VIEW PERSONAL 
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.css(".wsmenu-submenu > li:nth-child(1) > a:nth-child(1) > i:nth-child(1)")).click();
-//el getcurrente Es para actualizar la URl ala pagina que esta en ese momento
-await driver.getCurrentUrl();
-//HACE CLICK EN EL INFORMACION PERSONAL
-await driver.findElement(By.xpath(`/html/body/div/div[2]/div/div/div/div[1]/ul/li[2]/a`)).click();
-//Actualiza otra vez la url
-await driver.getCurrentUrl();
+
 
 ///lo siguiente agrega texto alos campos
 await driver.findElement(By.xpath(`//*[@id="lastname"]`)).clear();
@@ -90,18 +72,9 @@ async function CP_U2Validar()
 {
 let driver=await new Builder().forBrowser("firefox").build();
 ///Esta es URL QUE VA ABRIR
-await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/#");
+await driver.get("https://maniruzzamanakash.github.io/EcommerceTemplateBootstrap/account_information.html");
 ///LO SIGUIENTE  ES PARA ABRIR LA LISTA Y OPRIMIR LINK VIEW PERSONAL 
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.xpath(`//*[@id="top"]/div[3]/div/div[3]/div/nav/ul/li[6]/a`)).click();
-await driver.findElement(By.css(".wsmenu-submenu > li:nth-child(1) > a:nth-child(1) > i:nth-child(1)")).click();
-//el getcurrente Es para actualizar la URl ala pagina que esta en ese momento
-await driver.getCurrentUrl();
-//HACE CLICK EN EL INFORMACION PERSONAL
-await driver.findElement(By.xpath(`/html/body/div/div[2]/div/div/div/div[1]/ul/li[2]/a`)).click();
-//Actualiza otra vez la url
-await driver.getCurrentUrl();
+
 ///Lo siguiente limpia el los campos
 await driver.findElement(By.xpath(`//*[@id="firstname"]`)).clear();
 await driver.findElement(By.xpath(`//*[@id="lastname"]`)).clear();
@@ -132,8 +105,8 @@ else
 }
 
 //CP_U2_Crear();
-//CP_U2Validar();
-CP_U2_modificar();
+CP_U2Validar();
+//CP_U2_modificar();
 
 
 
